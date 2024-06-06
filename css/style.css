@@ -1,0 +1,473 @@
+/* #region common design  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* #endregion */
+
+/* #region header */
+
+header{
+    max-width: 1920px;
+    padding: 32px 312px;
+    margin: 0 auto;
+    border-bottom: 1px solid #F1F1F1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+h1 a {
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg);
+    width: 90px;
+    height: 40px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+    margin-right: 318px;
+}
+
+.menu_control , .menu_btn{
+    display: none;
+}
+
+.header_menu {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width:767px) {
+    header{
+        padding: 8px 12px;
+        justify-content: space-between;
+        gap:0px;
+    }
+    h1 a{
+        margin-right: 0px;
+    }
+    .menu_btn {
+        display: inline;
+    }
+    .menu_btn .close{
+        display: none;
+    }
+    .menu_control:checked~.menu_btn .close{
+        display: inline;
+    }
+    .menu_control:checked~.menu_btn .menu{
+        display: none;
+    }
+    .header_menu {
+        z-index: 5;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color:white;
+        align-items: center;
+        position: absolute;
+        top: 101%; /* 確保選單顯示在 header的下方 */
+        left: 0;
+    }
+    .menu_control:checked ~ .header_menu {
+        display: flex;
+    }
+}
+
+.header_menu li {
+    position: relative;
+}
+
+.header_menu a {
+    display: block;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+}
+
+.header_menu a::before {
+    content: "";
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    width: 8px;
+    height: 8px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.header_menu a::after {
+    content: "";
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    width: 8px;
+    height: 8px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.header_menu li::before {
+    content: "";
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+    width: 8px;
+    height: 8px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.header_menu li::after {
+    content: "";
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    width: 8px;
+    height: 8px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.header_menu a:hover::before,
+.header_menu a:hover::after,
+.header_menu li:hover::before,
+.header_menu li:hover::after {
+    border-color: #919191;
+}
+
+/* #endregion */
+
+/* #region title */
+.title {
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFA;
+    padding: 80px 0px;
+    align-items: center;
+}
+
+.content {
+    height: 192px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.quote {
+    align-self: flex-start;
+    width: 72px;
+}
+
+.end {
+    align-self: flex-end;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.slogantext {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #1E1E1E;
+    z-index: 1;
+}
+
+.slogantext span {
+    display: inline-block;
+    position: relative;
+}
+
+.slogantext span img {
+    position: absolute;
+    left: -15px;
+    bottom: 0px;
+    z-index: -1;
+}
+
+.title .info {
+    display: flex;
+    gap: 40px;
+}
+
+
+@media (max-width:767px) {
+    .title .info , .content{
+        flex-direction: column;
+    }
+    .quote{
+        align-self: center;
+        justify-content: center;
+    }
+    .end{
+        display: none;
+    }
+}
+
+.title .info li {
+    width: 298px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title .info h2 {
+    position: relative;
+    padding-bottom: 4px;
+    color: #5B5B5B;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.title .info h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    /* 讓底線居中 */
+    bottom: 0;
+    transform: translateX(-50%);
+    /* 移動底線使其居中 */
+    width: 24px;
+    /* 底線寬度可以根據需要調整 */
+    height: 2px;
+    /* 底線高度 */
+    background-color: #C1C1C1;
+    /* 底線顏色 */
+}
+
+.title .info p {
+    color: #3B3B3B;
+}
+
+/* #endregion */
+
+/* #region content */
+main {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 72px;
+    gap: 80px 24px;
+}
+
+li.card-item {
+    max-width: 636px;
+}
+
+.card-item img {
+    border-radius: 8px;
+    border: 1px solid #f1f1f1;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33.6px;
+    color: #3b3b3b;
+    margin-left: 16px;
+    margin-bottom: 8px;
+}
+
+.card-content {
+    color: #919191;
+    margin-left: 16px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card-tags {
+    display: flex;
+    margin-left: 16px;
+}
+
+.card-tags li {
+    margin-right: 16px;
+    padding: 4px 12px;
+    background-color: #f1f1f1;
+    border-radius: 16px;
+    color: #3b3b3b;
+}
+
+.pagemenu {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 120px;
+}
+
+.pagemenu a {
+    color: #3B3B3B;
+    text-decoration: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 2px 13px;
+    font-size: 24px;
+}
+
+.pagemenu_active a {
+    color: #FFFFFF;
+    background: #1E1E1E;
+    border-radius: 4px;
+}
+
+.pagemenu a:hover {
+    color: #FFFFFF;
+    background: #1E1E1E;
+    border-radius: 4px;
+}
+
+
+@media (max-width:767px) {
+    .card-list {
+        padding: 80px 12px 48px 12px;
+    }
+
+    .pagemenu {
+        padding-bottom: 80px;
+    }
+}
+
+/* #endregion */
+
+/* #region footer */
+
+footer {
+    max-width: 1920px;
+    border-top: 1px solid #FAFAFA;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+    margin: 0 auto;
+    padding: 80px 312px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+footer .info img {
+    width: 120px;
+    height: 54px;
+}
+
+footer .text {
+    font-size: 20px;
+    line-height: 30px;
+    color: #3B3B3B;
+}
+
+footer .email {
+    font-size: 20px;
+    line-height: 24px;
+    color: #919191;
+    text-decoration: none;
+}
+
+.footermenu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.footermenu li {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    border: 1px solid #C1C1C1;
+}
+
+li.footermenu_active {
+    background: #000000;
+    color: #FFFFFF;
+    font-weight: 700;
+    border: none;
+}
+
+.footermenu li:hover {
+    background: #000000;
+    color: #FFFFFF;
+    font-weight: 700;
+    border: none;
+}
+
+.footermenu img {
+    width: 56px;
+    height: 56px;
+    margin-right: 8px;
+}
+
+@media (max-width:767px) {
+    footer {
+        flex-direction: column;
+        padding: 40px 12px;
+        align-items: center;
+        gap: 40px;
+    }
+
+    footer .info {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .text {
+        font-size: 16px;
+        line-height: 26px;
+        color: #3B3B3B;
+    }
+
+    .footermenu li {
+        padding: 4px 24px;
+    }
+}
+
+/* #endregion */
