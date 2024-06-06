@@ -1,0 +1,136 @@
+/* #region css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* #endregion */
+
+/*  design  */
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+.wrap{
+	width: 310px;
+	margin: 0 auto;
+	padding: 6px;
+}
+
+.title{
+	background: #EAF0ED;
+	width: 298px;
+	padding:16px 101px 16px 101px;
+	color: #829886;
+	font-size: 24px;
+	line-height: 33.6px;
+	font-weight: 500;
+}
+
+.orderinfo{
+	margin-bottom: 16px;
+	border: 1px solid #EAF0ED;
+}
+
+.priceinfo{
+	padding: 16px;
+	width: 298px;
+}
+
+.substotal , .delivery , .total{
+	display: flex;
+	justify-content: space-between;
+}
+
+.substotal{
+	margin-bottom: 8px;
+}
+.delivery{
+	margin-bottom: 16px;
+}
+
+.ordertext{
+	font-size: 16px;
+	line-height: 22.4px;
+	font-weight: 500;
+	color:#829886;
+}
+
+.totalprice{
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 600;
+	color:#829886;
+}
+
+.shoppinginfo{
+	border: 1px solid #EAF0ED;
+}
+
+.shoppingmenu{
+	padding: 16px;
+	justify-content: center;
+}
+
+li{
+	width: 256px;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 12px;
+	align-items: center;
+}
+
+.last{
+	margin-bottom: 0;
+}
+
+li img{
+	margin-right: 16px;
+}

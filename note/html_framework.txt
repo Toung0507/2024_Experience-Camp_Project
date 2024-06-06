@@ -1,0 +1,14 @@
+○ <!DOCTYPE html>
+    !DOCTYPE是表示用html5的格式去寫
+○ <html lang="en">
+    en代表語系是英文
+○ <meta charset="UTF-8">
+    把網頁個編碼改成UTF-8(可正常顯示中文)
+○ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    RWD顯示手機/ipad
+○ <meta http-equiv="X-UA-Compatible" content="id=edge"> 
+    強制IE更新到最新版
+○ <link rel="stylesheet" href="css/style.css"> 
+    <!--rel代表的是這個link所關聯的是甚麼東西，例如stylesheet代表此link關聯的東西是一個樣式表
+○ <a target="_blank" title="#" href="#">#</a>
+    target是超連結開啟方式，預設是在原網頁，_blank開新頁面

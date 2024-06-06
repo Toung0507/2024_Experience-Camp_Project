@@ -1,0 +1,13 @@
+※外層屬性
+    1. display:flex  --> 必備屬性
+
+    2. flex-direction:決定flex軸線  
+        1.row (從左到右，預設)
+        2.row-reverse(從右到左)
+        3.column(從上到下)
+        4.column-reverse(從下到上)
+    
+
+    3. justify-content:主要軸線的對齊  --> 
+
+    4. align-items:交錯軸線的對齊  --> 

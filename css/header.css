@@ -14,7 +14,7 @@ img{
 }
 
 body {
-    font-family: "Noto Sans TC", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     line-height: 1.5;
     font-size: 16px;
     font-weight: 400;
@@ -168,7 +168,6 @@ h1 a {
     background: #FAFAFA;
     padding: 80px 0px;
     align-items: center;
-    gap: 24px;
 }
 
 .content {
@@ -177,6 +176,7 @@ h1 a {
     align-items: center;
     margin: 0 auto;
     justify-content: center;
+    margin-bottom: 24px;
 }
 
 .quote {
@@ -222,16 +222,8 @@ h1 a {
 
 
 @media (max-width:767px) {
-    .title{
-        padding: 40px 24px 80px 24px;
-        gap: 40px;
-    }
     .title .info , .content{
         flex-direction: column;
-    }
-    .title .info {
-        display: flex;
-        gap: 20px;
     }
     .quote{
         align-self: center;
@@ -239,13 +231,6 @@ h1 a {
     }
     .end{
         display: none;
-    }
-    .slogantext {
-        text-align: center;
-        font-size: 20px;
-        line-height: 30px;
-        color: #1E1E1E;
-        z-index: 1;
     }
 }
 
@@ -284,205 +269,6 @@ h1 a {
 
 .title .info p {
     color: #3B3B3B;
-}
-
-/* #endregion */
-
-/* #region content */
-main {
-    max-width: 1296px;
-    margin: 0 auto;
-}
-
-.card-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 120px;
-    padding-bottom: 72px;
-    gap: 80px 24px;
-}
-
-li.card-item {
-    max-width: 636px;
-}
-
-.card-item img {
-    border-radius: 8px;
-    border: 1px solid #f1f1f1;
-    margin-bottom: 16px;
-}
-
-.card-title {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 33.6px;
-    color: #3b3b3b;
-    margin-left: 16px;
-    margin-bottom: 8px;
-}
-
-.card-content {
-    color: #919191;
-    margin-left: 16px;
-    margin-bottom: 24px;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.card-tags {
-    display: flex;
-    margin-left: 16px;
-}
-
-.card-tags li {
-    margin-right: 16px;
-    padding: 4px 12px;
-    background-color: #f1f1f1;
-    border-radius: 16px;
-    color: #3b3b3b;
-}
-
-.pagemenu {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    padding-bottom: 120px;
-}
-
-.pagemenu a {
-    color: #3B3B3B;
-    text-decoration: none;
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 2px 13px;
-    font-size: 24px;
-}
-
-.pagemenu_active a {
-    color: #FFFFFF;
-    background: #1E1E1E;
-    border-radius: 4px;
-}
-
-.pagemenu a:hover {
-    color: #FFFFFF;
-    background: #1E1E1E;
-    border-radius: 4px;
-}
-
-
-@media (max-width:767px) {
-    .card-list {
-        padding: 80px 12px 48px 12px;
-    }
-
-    .pagemenu {
-        padding-bottom: 80px;
-    }
-}
-
-/* #endregion */
-
-/* #region footer */
-
-footer {
-    max-width: 1920px;
-    border-top: 1px solid #FAFAFA;
-    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
-    margin: 0 auto;
-    padding: 80px 312px;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer .info {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-footer .info img {
-    width: 120px;
-    height: 54px;
-}
-
-footer .text {
-    font-size: 20px;
-    line-height: 30px;
-    color: #3B3B3B;
-}
-
-footer .email {
-    font-size: 20px;
-    line-height: 24px;
-    color: #919191;
-    text-decoration: none;
-}
-
-.footermenu {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-
-.footermenu li {
-    display: flex;
-    align-items: center;
-    padding: 8px 24px;
-    gap: 8px;
-    border-radius: 8px;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 400;
-    border: 1px solid #C1C1C1;
-}
-
-li.footermenu_active {
-    background: #000000;
-    color: #FFFFFF;
-    font-weight: 700;
-    border: none;
-}
-
-.footermenu li:hover {
-    background: #000000;
-    color: #FFFFFF;
-    font-weight: 700;
-    border: none;
-}
-
-.footermenu img {
-    width: 56px;
-    height: 56px;
-    margin-right: 8px;
-}
-
-@media (max-width:767px) {
-    footer {
-        flex-direction: column;
-        padding: 40px 12px;
-        align-items: center;
-        gap: 40px;
-    }
-
-    footer .info {
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    footer .text {
-        font-size: 16px;
-        line-height: 26px;
-        color: #3B3B3B;
-    }
-
-    .footermenu li {
-        padding: 4px 24px;
-    }
 }
 
 /* #endregion */

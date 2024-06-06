@@ -1,0 +1,125 @@
+/* #region common design  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* #region footer */
+footer {
+    max-width: 1920px;
+    border-top: 1px solid #FAFAFA;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+    margin: 0 auto;
+    padding: 80px 312px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer .info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+footer .info img {
+    width: 120px;
+    height: 54px;
+}
+
+footer .text {
+    font-size: 20px;
+    line-height: 30px;
+    color: #3B3B3B;
+}
+
+footer .email {
+    font-size: 20px;
+    line-height: 24px;
+    color: #919191;
+    text-decoration: none;
+}
+
+.footermenu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.footermenu li {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    border: 1px solid #C1C1C1;
+}
+
+li.footermenu_active {
+    background: #000000;
+    color: #FFFFFF;
+    font-weight: 700;
+    border: none;
+}
+
+.footermenu li:hover{
+    background: #000000;
+    color: #FFFFFF;
+    font-weight: 700;
+    border: none;
+}
+
+.footermenu img {
+    width: 56px;
+    height: 56px;
+    margin-right: 8px;
+}
+
+/* #endregion */
+
+@media (max-width:767px) {
+    footer{
+        flex-direction: column;
+        padding: 40px 12px;
+        align-items: center;
+        gap: 40px;
+    }
+    footer .info{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    footer .text {
+        font-size: 16px;
+        line-height: 26px;
+        color: #3B3B3B;
+    }
+    .footermenu li {
+        padding: 4px 24px;
+    }
+}

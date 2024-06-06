@@ -1,0 +1,68 @@
+/*
+標籤選擇器{ 選擇哪一個html標籤(h1、p、a等等)來做設定，中間的設定;是必須的，代表一個屬性的設定已結束。
+    屬性:設定值; ex:顏色:紅色;
+    屬性:設定值; ex:字體大小:20像素;
+}
+*/
+h1{
+    color:green;
+    font-size:40px;
+    border:5px solid blue; /* 線條粗細 線條樣式(實心solid / 虛線dashed / 圓點虛線dotted) 線條顏色 */
+    border-bottom:3px dotted pink;
+    /*border是方形框。如果加上-left就是只有左邊有線，上(top)下(bottom)左(left)右(right)*/
+}
+p{
+    color:black;
+    font-family:Verdana; /* 字型 */
+    font-size:20px; /* 字體大小 */
+    line-height: 2; /* 行距 */
+    text-align:left; /* 對齊方式(靠左/靠右/置中..) */
+    text-indent:40px; /* 首行縮排，字體大小的兩倍 */
+    text-decoration:line-through; /*底線underline、刪除縣line-through .. */
+    letter-spacing: 2px; /* 字元間距 */
+}
+li{
+    color:blueviolet;
+    font-size: 35px;
+}
+a{
+    color:green;
+}
+
+/*
+擬態選擇器，大多使用在a連結上
+
+html標籤(ex:a):擬態選擇器(ex:hover){
+    屬性(ex:color):設定值(red);
+}
+
+hover -- 滑鼠移過去html標籤上會顯示的效果
+active -- 滑鼠按住html標籤不動顯示的效果
+*/
+
+a:hover{
+    color:orange;
+}
+
+a:active{
+    color:olivedrab;
+    font-size: 45px;
+}
+/*
+類別選擇器
+html檔案中:
+<p class="important"> 這段是重點 </p>
+
+
+css檔案中:
+.類別選擇器(ex:important){
+    屬性(ex:color):設定值(red);
+}
+
+.一定要打不然不會出現
+*/
+
+.important{
+    color:red;
+    font-size:30px;
+}

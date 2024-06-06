@@ -1,0 +1,15 @@
+.menu_control{
+    display: none;
+}
+
+.menu_btn .close{
+    display: none;
+}
+
+.menu_control:checked~.menu_btn .menu{
+    display: none;
+}
+
+.menu_control:checked~.menu_btn .close{
+    display: inline;
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日任務-CSS</title>
+    <link rel="stylesheet" href="css/daily_task.css">
+    <!-- #region 引用jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/daily_task.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+    <!-- #endregion -->
+
+    <!-- #region 引用Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- #endregion -->
+
+    <!-- #region 引用字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- #endregion 引用字體 -->
+</head>
+<style>
+    .separate {
+        border-color: red;
+    }
+</style>
+
+<body>
+    <!-- #region 4/25-切版任務 Day1 - HTML 標籤元素、CSS 判斷  -->
+    <p class="p_425">
+    <h1 class="p_425">4/25-切版任務 Day1 - HTML 標籤元素、CSS 判斷</h1>
+    依照下列 HTML 與 CSS 程式碼內容判斷，請分享以下 HTML 標籤<br>
+    a. p、span、div、a 各為什麼顏色<br>
+    b. p、span、div、a、img 是區塊元素（block）還是行內元素 （inline）？
+    <!-- HTML 程式碼  -->
+    <p class="green yellow orange">我是P段落，文字顏色是什麼呢?區塊元素還是行內元素呢?</p>
+    <span class="red yellow green">我是span，文字顏色是什麼呢?區塊元素還是行內元素呢?</span>
+    <div class="blue orange red">我是div，文字顏色是什麼呢?區塊元素還是行內元素呢?</div>
+    <a class="yellow blue green">我是a連結，文字顏色是什麼呢?區塊元素還是行內元素呢?</a>
+    <img src="..." alt="img">我是img，區塊元素還是行內元素呢?
+    <hr>
+    Question a:<br>
+    p是綠色 / span是綠色 / div是紅色 / a是綠色<br>
+    Question b:<br>
+    p是區塊元素 / span是行內元素 / div是區塊元素 / a是行內元素 / img是行內元素<br>
+    依結果來看，a跟img兩者並排在一起
+    因為.class都是同權重，因此會依照css中最後一個.class來做設定。<br>
+    p、span、a中都有.green，.green又在最後，因此這三者都是綠色<br>
+    a則是.red在最後，因此是紅色的
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 4/26-切版任務 Day2 - 圖片處理技巧 -->
+    <p class="p_426">
+    <h1 class="h1_426">4/26-切版任務 Day2 - 圖片處理技巧</h1>
+    </p>
+    <img class="img_426 " src="https://ithelp.ithome.com.tw/storage/image/logo.svg" alt="">
+    <p class="p_426">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nostrum officiis aspernatur.
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 4/29-切版任務 Day3 - box-sizing -->
+    <p class="p_429">
+    <h1 class="h1_429">4/29-切版任務 Day3 - box-sizing</h1>
+    <p class="p_429">請觀看此<a class="a_429" href="https://codepen.io/hexschool/pen/yLvWLZY">CodePen</a>計算 .box1 與 .box2
+        的寬高（請不要用開發人員工具觀看）</p>
+    <hr>
+    <ul class="ul_429">
+        <li class="li_429">box1的寬度：<b>338px</b>；高度：<b>110px</b>。
+            <ul class="ul_429">
+                <li class="li_429">寬度：300px(width)+16px*2(padding)+3px*2(border)=338px</li>
+                <li class="li_429">高度：24*3(line-height)+16px*2(padding)+3px*2(border)=110px</li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="ul_429">
+        <li class="li_429">.box2的寬度：<b>300px</b>；高度：<b>110px</b>。
+            <ul class="ul_429">
+                <li class="li_429">寬度：設定border-box會依照css中設定的width:300px就是300px</li>
+                <li class="li_429">
+                    高度：雖設定border-box但css中無設定高度，因此就是原本會有的高度24*3(line-height)+16px*2(padding)+3px*2(border)=110px</li>
+            </ul>
+        </li>
+    </ul>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 4/30-切版任務 Day4 - HTML、CSS 文字設定與 margin、padding 運用 -->
+    <p class="p_430">
+    <h1 class="h1__430">4/30-切版任務 Day4 - HTML、CSS 文字設定與 margin、padding 運用</h1>
+    <p class="p_430">
+        重要觀念選擇題答案為<span>A</span>
+    </p>
+    <hr>
+    <div class="container_430">
+        <div class="header_430">
+            <h1 class="h1_430">六角學院</h1>
+            <h2 class="h2_430">軟體工程師體驗營 - 一個月帶你做出網頁作品</h2>
+        </div>
+    </div>
+    <div class="content_430">
+        <div class="container_430">
+            <p class="p12_430">
+                Lorem <span class="mark_430">ipsum dolor</span> sit amet consectetur adipisicing elit. Nesciunt nostrum
+                neque ipsam velit quibusdam delectus praesentium aut necessitatibus! Exercitationem, aperiam!
+            </p>
+            <p class="p12_430">
+                <span class="mark_430">Mickey Mouse</span> would have to be the main figure. Yet some mention must be
+                made of our great animated classics. I made sketches of all the characters I thought should appear.
+                Then, I called upon my modeling skills to build a one-16th-inch scale paper cut-out model of what I
+                wanted. This was before photo-copying machines with reducing capabilities, so I had to make all the
+                drawings in scale. Many of the figures had to be drawn, a quarter-inch high. The entire set was about
+                18-inches long by 3.5-inches high. But this model was a good tool for planning the show sequence and
+                experimenting with different scenFes.
+            </p>
+            <a class="a_430" href="https://www.hexschool.com/" alt="前往頁面" title="前往頁面">前往頁面</a>
+        </div>
+
+    </div>
+    </div>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 5/1-切版任務 Day5 - Material Icons + Figma Icon 名稱觀看教學 -->
+    <p class="p_0501">
+    <h1 class="h1_0501">5/1-切版任務 Day5 - Material Icons + Figma Icon 名稱觀看教學</h1>
+    <span class="material-icons">
+        arrow_forward
+    </span>
+    <span class="material-icons">
+        arrow_downward
+    </span>
+    <span class="material-icons">
+        menu
+    </span>
+    <span class="material-icons">
+        close
+    </span>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 5/2-切版任務 Day6 - Google Fonts 線上外部字型載入 -->
+    <p class="p_0502">
+    <h1 class="h1_0502">5/2-切版任務 Day6 - Google Fonts 線上外部字型載入</h1>
+    <p class="Noto_Sans">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, cumque culpa maxime laudantium tempora at
+        corrupti odit ex deleniti. In?
+    </p>
+    <p class="Tourney">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti explicabo nesciunt molestiae cum dolor
+        excepturi at cumque. Consectetur perferendis suscipit accusamus porro adipisci?
+    </p>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 5/3-切版任務 Day7 - jQuery 基礎教學＋點選按鈕動態切換 active 效果 -->
+    <p class="p_0503">
+    <h1 class="h1_0503">5/6-切版任務 Day7 - jQuery 基礎教學＋點選按鈕動態切換 active 效果</h1>
+    <button type="button" class="btn">
+        <span class="material-symbols-outlined hamburger">
+            menu
+        </span>
+        <span class="material-symbols-outlined closure close">
+            close
+        </span>
+    </button>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 5/6-切版任務 Day8 - flex 練習 I -->
+    <p class="p_0506">
+    <h1 class="h1_0506">5/6-切版任務 Day8 - flex 練習 I</h1>
+    <div class="outer_0506">
+        <div class="inner_0506"></div>
+    </div>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 5/7-切版任務 Day9 - flex 練習 II -->
+    <p class="p_0507">
+    <h1 class="h1_0507">5/7-切版任務 Day9 - flex 練習 II</h1>
+    <div class="container_507">
+        <div class="inside_507"></div>
+        <div class="inside_507"></div>
+        <div class="inside_507"></div>
+        <div class="inside_507 alignself_507"></div>
+    </div>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 5/8-切版任務 Day10 - flex 運用 -->
+    <p class="p_0508">
+    <h1 class="h1_0508">5/8-切版任務 Day10 - flex 運用</h1>
+    <div class="wrap_0508">
+        <div class="header_0508">
+            <h1>DORKEN</h1>
+            <ul class="menu_0508">
+                <li><a href="">最新資訊</a></li>
+                <li><a href="">促銷活動</a></li>
+                <li><a href="">休閒鞋類</a></li>
+                <li><a href="">工作鞋類</a></li>
+                <li><a href="">兒童鞋類</a></li>
+            </ul>
+        </div>
+        <div class="container_0508">
+            <div class="box_0508">
+            </div>
+            <div class="text_0508">
+                <div class="content_0508">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis, vero quaerat debitis ea
+                        omnis ratione? Voluptatem, quibusdam dolor reprehenderit recusandae minima voluptates
+                        accusantium asperiores molestias? Saepe eveniet fugiat asperiores.
+                        <br>
+                        Tempora assumenda omnis harum explicabo. Ipsa, tempora sequi! Aliquam excepturi id illo
+                        perferendis fuga eligendi doloremque, praesentium recusandae minus quam et odio tempore sequi
+                        qui? Facere quasi ipsum corrupti culpa.
+                    </p>
+                </div>
+                <div class="page_0508">
+                    <a href="">上一頁</a>
+                    <a href="">下一頁</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 5/9-切版任務 Day11 - position 練習 I -->
+    <p class="p_0509">
+    <h1 class="h1_0509">5/9-切版任務 Day10 - flex 運用</h1>
+    <div class="wrap_0509">
+        <div class="box1_0509"></div>
+        <div class="box2_0509"></div>
+        <div class="box3_0509"></div>
+    </div>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+
+    <!-- #region 5/10-切版任務 Day12 - 運用 jQuery 呈現手機版漢堡選單效果 -->
+    <p class="p_0510">
+    <h1 class="h1_0510">5/10-切版任務 Day12 - 運用 jQuery 呈現手機版漢堡選單效果</h1>
+    </p>
+    <hr class="separate">
+    <!-- #endregion -->
+</body>
+
+</html>

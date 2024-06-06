@@ -1,0 +1,78 @@
+◆ 在css檔案中;是必須的，代表一個屬性的設定已結束。
+◆ 瀏覽器中都會有預設的css樣式，但在設計時，都會在最前面加上css reset以便清空預設樣式，可在css/cssreset.txt看到內容
+◆ class名稱前面會有一個.
+◆ id名稱前面會有一個#
+※ 選擇器
+    1 標籤選擇器，選擇哪一個html標籤(h1、p、a等等)做設定
+
+        標籤選擇器{ 
+            屬性(ex:color):設定值(red);
+            屬性(ex:font-size):設定值(20px);
+        }
+
+    2 類別選擇器(class)
+
+        html檔案中:
+        <p class="important"> 這段是重點 </p>
+
+        css檔案中:
+        .類別選擇器(ex:important){
+            屬性(ex:color):設定值(red);
+        }
+
+        .一定要打不然不會出現
+
+    3 擬態選擇器，大多使用在a連結上
+
+        html標籤(ex:a):擬態選擇器(ex:hover){
+            屬性(ex:color):設定值(red);
+        }
+
+        hover -- 滑鼠移過去html標籤上會顯示的效果
+        active -- 滑鼠按住html標籤不動顯示的效果
+    
+    4 後代選擇器
+
+        html檔案中:
+        <div class="style1"> 
+            <a href="#">sytle1</a>
+        </div>
+
+        css檔案中:
+        .父元素(ex:style1) 子元素(ex:a){
+            屬性(ex:color):設定值(red);
+        }
+
+        代表只有在style1中的a標籤顏色會改變，如果不在class=sytle1中的a標籤則不會改變
+
+※ css權重
+    html中
+        <p class="hx">類別選擇器</p>
+        <p class="iid">ID只能唯一一個</p>
+
+    (低到高)
+        1.標籤選擇器(ex:純p)
+        2.類別選擇器(ex:.hx)
+        3.id(ex:#iid)
+        4.直接在html標籤寫(sytle="color:red;")
+        5.在css設定值後加上 !important
+
+※ display:block、inline
+    HTML 區塊元素與行內元素的差別 --> https://kumo.tw/article.php?id=80
+    1.block區塊元素：<h1>、<div>、<p>、<li>…
+        ●盡可能的佔滿一整個版面
+        ●區塊元素會另起一行來進行呈現
+        ●設定寬高後會依照設定值更動
+    2.inline行內元素：<a>、<span>…
+        ●比較常用在段落裡面
+        ●設定寬高後，!無法!依照設定值更動，如果需要設定寬高需先輸入dispaly:block
+
+※ box model 盒模型
+    width元素寬度
+    height元素高度
+    padding元素內留白，像內推的距離
+    border元素的邊界
+    margin元素外的距離，像外推的距離，只有此不包含在元素的大小內
+    margin-left(right):auto是水平置中
+    text-align:center文字置中對齊    
+    Box-sizing:Border-box / Content-box  --> https://ithelp.ithome.com.tw/articles/10252827
