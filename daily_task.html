@@ -359,6 +359,73 @@
     <hr class="separate">
 
     <!-- #endregion -->
+
+
+    <!-- #region 切版任務 Day14 - RWD 觀念補給  -->
+    <h2 class="h2_0514">題目</h2>
+    <p class="p_0514">請回答關於 RWD 的三題問答題：</p>
+
+    <h3 class="h3_0514">第一題</h3>
+    <p class="p_0514">請說明 Mobile First 設計與 Desktop First 設計分別是什麼意思？</p>
+
+    <h3 class="h3_0514">第二題</h3>
+    <p class="p_0514">請問下方代碼這種寫法是屬於 Mobile First 設計還是 Desktop First 設計？</p>
+    <pre class="pre_0514">
+        <code class="code_0514">
+        .item{
+        width: 100%;
+        }
+
+        @media (min-width: 768px) {
+        .item{
+            width: 50%;
+        }
+        }
+
+        @media (min-width: 1440px) {
+        .item{
+            width: 25%;
+        }
+        }
+        </code>
+    </pre>
+
+    <h3 class="h3_0514">第三題</h3>
+    <p class="p_0514">請問當螢幕寬度小於 414px 時 content 寬度為多少？為什麼？</p>
+    <pre class="pre_0514">
+        HTML：
+        <code class="language-html code_0514">
+            &lt;body&gt;
+                &lt;div class="content"&gt;&lt;/div&gt;
+            &lt;/body&gt;
+        </code>
+    </pre>
+
+    <pre>
+        CSS：
+        <code class="language-css code_0514">
+            .content {
+                width: 25%;
+                margin: 10px;
+            }
+            @media (max-width: 414px) {
+                .content {
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .content {
+                    width: 50%;
+                }
+            }
+        </code>
+    </pre>
+
+    </p>
+
+
+    <!-- #endregion -->
 </body>
 
 </html>

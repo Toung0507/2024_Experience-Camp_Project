@@ -5,105 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="css/cssreset.css"> -->
+    <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/try.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- menu_icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- close icon -->
 </head>
 
 <body>
-    <div class="Que_0513">
-        <p class="qu_0513">
-            Q1 以下 CSS 選擇器哪個錯誤？
-        </p>
-        <ol class="opt_0513">
-            <li>.container</li>
-            <li>#title1</li>
-            <li class="choose_0513">li > a > img</li>
-            <li>$style1</li>
-        </ol>
-        <hr class="separate">
-        <p class="qu_0513">
-            Q2 以下關於 HTML 與 CSS 的說明哪個有誤？
-        </p>
-        <ol class="opt_0513">
-            <li>img 的 alt 屬性是用來給視障人士使用並且當做圖片失效時顯示的</li>
-            <li>a 標籤的擬態選擇器有 :hover :active</li>
-            <li class="choose_0513">如果要改變 a 標籤大小，需要加上 display: inline;</li>
-            <li>默認的文字大小是 16px</li>
-        </ol>
-        <hr class="separate">
-        <p class="qu_0513">
-            Q3 關於列表標籤的說明哪個有誤？
-        </p>
-        <ol class="opt_0513">
-            <li>ol 是有序列表 裡面的 li 會有 123 等數字排序</li>
-            <li>所有主流瀏覽器都支持 ol 標籤</li>
-            <li class="choose_0513">ul 是有序列表 裡面的 li 會有 123 等數字排序</li>
-            <li>ol ul 的內層都是 li 標籤</li>
-        </ol>
-        <hr class="separate">
-        <p class="qu_0513">
-            Q4 下列選項中哪一個標籤不是區塊元素？
-        </p>
-        <ol class="opt_0513">
-            <li>&lt;p&gt;&lt;/p&gt;</li>
-            <li>&lt;h1&gt;&lt;/h1&gt;</li>
-            <li class="choose_0513">&lt;img/&gt;</li>
-            <li>&lt;div&gt;&lt;/div&gt;</li>
-        </ol>
-        <hr class="separate">
-        <p class="qu_0513">
-            Q5 我想讓 a 連結按鈕距離上方與下方的 div 區塊各 10px 高度，哪個選項寫法正確？
-        </p>
-        <ol class="opt_0513">
-            <li>margin: 0 10px; display: block;</li>
-            <li class="choose_0513">padding: 10px 0;</li>
-            <li>padding: 0 10px;</li>
-            <li>margin: 10px 0; display: block;</li>
-        </ol>
-        <hr class="separate">
-        <p class="qu_0513">
-            Q6: 製作響應式網頁時 header 中必須加入什麼東西？
-        </p>
-        <ol class="opt_0513">
-            <li>&lt;meta media="true" /&gt;</li>
-            <li class="choose_0513">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</li>
-            <li>&lt;script src="./viewport.js"&gt;&lt;/script&gt;</li>
-        </ol>
-        <hr class="separate">
-        <p class="qu_0513">
-            Q7: 在響應式網頁中嚴格禁止出現以下哪個東西？
-        </p>
-        <ol class="opt_0513">
-            <li class="choose_0513">X 軸</li>
-            <li>Y 軸</li>
-            <li>Z 軸</li>
-        </ol>
-        <hr class="separate">
-        <p class="qu_0513">
-            Q8: 關於響應式網頁的說法以下何者「錯誤」？
-        </p>
-        <ol class="opt_0513">
-            <li>RWD 是 Responsive Web Design 的簡稱</li>
-            <li class="choose_0513">@media (max-width: 400px) {...} 表示當螢幕尺寸大於等於 400px 就會套用 {...} 中撰寫的樣式</li>
-            <li>@media (max-width: 400px) {...} 表示當螢幕尺寸小於等於 400px 就會套用 {...} 中撰寫的樣式</li>
-        </ol>
-        <hr class="separate">
-    </div>
-    <div class="rev_0513">
-        CCCCBBAB<br>
-        DCCCDBAB
-        第一題及第五題錯誤
-        <ul>
-            <li>第一題的C選項是後代，有階層的意思<br>D選項類別選擇器class，無法用"$"開頭</li>
-            <li>第五題的B選項只會影響a連結的上下，不影響到外部寬度；且因為a連結是inline元素，不會有更動，所以需要改成block元素，影響外部需用margin</li>
-        </ul>
-    </div>
-</body>
+    <h2>題目</h2>
+    <p>請回答關於 RWD 的三題問答題：</p>
+
+    <h3>第一題</h3>
+    <p>請說明 Mobile First 設計與 Desktop First 設計分別是什麼意思？</p>
+
+    <h3>第二題</h3>
+    <p>請問下方代碼這種寫法是屬於 Mobile First 設計還是 Desktop First 設計？</p>
+    <pre>
+        <code>
+        .item{
+        width: 100%;
+        }
+
+        @media (min-width: 768px) {
+        .item{
+            width: 50%;
+        }
+        }
+
+        @media (min-width: 1440px) {
+        .item{
+            width: 25%;
+        }
+        }
+        </code>
+    </pre>
+
+    <h3>第三題</h3>
+    <p>請問當螢幕寬度小於 414px 時 content 寬度為多少？為什麼？</p>
+
+
+    <pre>
+        HTML：
+        <code class="language-html">
+            &lt;body&gt;
+                &lt;div class="content"&gt;&lt;/div&gt;
+            &lt;/body&gt;
+        </code>
+    </pre>
+
+
+    <pre>
+        CSS：
+        <code class="language-css">
+            .content {
+                width: 25%;
+                margin: 10px;
+            }
+            @media (max-width: 414px) {
+                .content {
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .content {
+                    width: 50%;
+                }
+            }
+        </code>
+    </pre>
+
+    <body>
 
 </html>

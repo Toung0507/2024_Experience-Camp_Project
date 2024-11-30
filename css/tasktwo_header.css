@@ -100,11 +100,16 @@ h1 a {
     position: relative;
 }
 
+/* 基本樣式 */
 .header_menu a {
     display: block;
     padding: 4px 8px;
     text-decoration: none;
     color: #000000;
+    position: relative;
+}
+
+.header_menu li {
     position: relative;
 }
 
@@ -152,12 +157,24 @@ h1 a {
     position: absolute;
 }
 
+/* hover 狀態 */
 .header_menu a:hover::before,
 .header_menu a:hover::after,
 .header_menu li:hover::before,
 .header_menu li:hover::after {
     border-color: #919191;
 }
+
+/* active 狀態 */
+.headermenu_active a::before,
+.headermenu_active a::after,
+.header_menu .headermenu_active::before,
+.header_menu .headermenu_active::after {
+    border-color: #919191;
+}
+
+
+
 
 /* #endregion */
 

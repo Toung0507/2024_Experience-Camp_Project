@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-img{
+img {
     width: 100%;
     height: auto;
 }
@@ -20,16 +20,46 @@ body {
     font-weight: 400;
 }
 
+/* .wrap {
+    max-width: 1296px;
+    margin: 0 auto;
+} */
+
 .wrap {
-    max-width: 1920px;
+    max-width: 1296px;
     margin: 0 auto;
 }
+
+@media(max-width:1295px) {
+    .wrap {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
 
 /* #endregion */
 
 /* #region header */
 
-header{
+header {
+    border-bottom: 1px solid #F1F1F1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+
+/* header {
     max-width: 1920px;
     padding: 32px 312px;
     margin: 0 auto;
@@ -37,7 +67,7 @@ header{
     display: flex;
     align-items: center;
     position: relative;
-}
+} */
 
 h1 a {
     background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg);
@@ -50,54 +80,71 @@ h1 a {
     margin-right: 318px;
 }
 
-.menu_control , .menu_btn{
+.menu_control,
+.menu_btn {
     display: none;
 }
 
 .header_menu {
     display: flex;
     gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 @media (max-width:767px) {
-    header{
+    header {
         padding: 8px 12px;
         justify-content: space-between;
-        gap:0px;
+        gap: 0px;
     }
-    h1 a{
+
+    header .wrap {
+        justify-content: space-between;
+        gap: 0px;
+    }
+
+    h1 a {
         margin-right: 0px;
     }
+
     .menu_btn {
         display: inline;
     }
-    .menu_btn .close{
+
+    .menu_btn .close {
         display: none;
     }
-    .menu_control:checked~.menu_btn .close{
+
+    .menu_control:checked~.menu_btn .close {
         display: inline;
     }
-    .menu_control:checked~.menu_btn .menu{
+
+    .menu_control:checked~.menu_btn .menu {
         display: none;
     }
+
     .header_menu {
         z-index: 5;
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color:white;
+        background-color: white;
         align-items: center;
         position: absolute;
-        top: 101%; /* 確保選單顯示在 header的下方 */
+        top: 101%;
+        /* 確保選單顯示在 header的下方 */
         left: 0;
     }
-    .menu_control:checked ~ .header_menu {
+
+    .menu_control:checked~.header_menu {
         display: flex;
     }
 }
 
 .header_menu li {
     position: relative;
+
 }
 
 .header_menu a {
@@ -152,19 +199,10 @@ h1 a {
     position: absolute;
 }
 
-/* hover 狀態 */
 .header_menu a:hover::before,
 .header_menu a:hover::after,
 .header_menu li:hover::before,
 .header_menu li:hover::after {
-    border-color: #919191;
-}
-
-/* active 狀態 */
-.headermenu_active a::before,
-.headermenu_active a::after,
-.header_menu .headermenu_active::before,
-.header_menu .headermenu_active::after {
     border-color: #919191;
 }
 
@@ -231,24 +269,30 @@ h1 a {
 
 
 @media (max-width:767px) {
-    .title{
+    .title {
         padding: 40px 24px 80px 24px;
         gap: 40px;
     }
-    .title .info , .content{
+
+    .title .info,
+    .content {
         flex-direction: column;
     }
+
     .title .info {
         display: flex;
         gap: 20px;
     }
-    .quote{
+
+    .quote {
         align-self: center;
         justify-content: center;
     }
-    .end{
+
+    .end {
         display: none;
     }
+
     .slogantext {
         text-align: center;
         font-size: 20px;
@@ -298,10 +342,13 @@ h1 a {
 /* #endregion */
 
 /* #region content */
-main {
+
+
+
+/* main {
     max-width: 1296px;
     margin: 0 auto;
-}
+} */
 
 .card-list {
     display: flex;
@@ -396,7 +443,25 @@ li.card-item {
 
 /* #region footer */
 
+
 footer {
+    border-top: 1px solid #FAFAFA;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+    display: flex;
+    justify-content: center;
+}
+
+footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 12px;
+    width: 100%;
+}
+
+
+
+
+/* footer {
     max-width: 1920px;
     border-top: 1px solid #FAFAFA;
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
@@ -404,7 +469,7 @@ footer {
     padding: 80px 312px;
     display: flex;
     justify-content: space-between;
-}
+} */
 
 footer .info {
     display: flex;
@@ -469,12 +534,19 @@ li.footermenu_active {
     margin-right: 8px;
 }
 
+
+
 @media (max-width:767px) {
     footer {
         flex-direction: column;
         padding: 40px 12px;
         align-items: center;
         gap: 40px;
+    }
+    footer .wrap {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 12px;
     }
 
     footer .info {
